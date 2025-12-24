@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://abubakarsadiqismail.com/al-folio/sitemap.xml
+Sitemap: https://abubakarsadiqismail.com/sitemap.xml
