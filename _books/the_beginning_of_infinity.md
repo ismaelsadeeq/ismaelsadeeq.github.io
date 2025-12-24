@@ -16,9 +16,7 @@ stars: 4.6
 status: Reading 
 ---
 
-The Reach of Explanations was an interesting read, and one of the key takeaways for me is
-that explanations are conjectures that have been tested and scrutinised using the scientific method
-When humanity started explaining phenomena using this approach sprouts the Enlightenment era, which can be envisioned  here https://deep-timeline.oberbrunner.com/
-
-
-Closer to Reality is quite an obvious read to me, but still interesting.
+The Beginning of Infinity offers a compelling argument that explanations are conjectures tested through rigorous scrutiny and the scientific method.
+The book's most striking insight is how this approach to knowledge seeking deeper explanations rather than accepting surface observations—sparked the Enlightenment. 
+You can visualize this pivotal shift in human progress at https://deep-timeline.oberbrunner.com/.
+Closer to Reality, while covering more familiar ground for me, still provides valuable perspectives worth exploring
