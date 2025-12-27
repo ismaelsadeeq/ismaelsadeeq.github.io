@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bitcoind Policy Estimator Modes Analysis"
+title: "Bitcoind Block Policy Fee Rate Estimator Modes Analysis"
 date: 2024-06-24
 description: Analysis of Bitcoind estimatesmartfee modes
 tags: Bitcoin Bitcoind  Feerate-Estimation

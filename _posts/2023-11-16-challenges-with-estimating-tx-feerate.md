@@ -71,7 +71,20 @@ I have been watching the blockchain for a while to verify the behavior of the `C
 | Block 812595 was confirmed           | 18 s/vb                     | 22 s/vb                                     | 25 s/vb          | 22 s/vb         |
 | Block 812596 was confirmed           | 20 s/vb                     | 22 s/vb                                     | 23 s/vb          | 19 s/vb         |
 
-![Graph of how it changes](https://hackmd.io/_uploads/Bk3FYPRzT.png)
+
+<div class="row mt-4">
+  <div class="col-md-9">
+    <figure>
+      <img class="img-fluid rounded z-depth-1"
+           src="{{ site.baseurl }}/assets/img/challenges-of-fee-estimation/fig1.png"
+           alt="Example of mempool addition">
+      <figcaption class="mt-2 text-muted">
+       Graph of how it changes
+      </figcaption>
+    </figure>
+  </div>
+</div>
+
 
 The estimates above demonstrate how the `CBlockPolicyEstimator` operates during congestion, completely independent of the mempool's condition.
 
