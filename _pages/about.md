@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic.jpeg
   image_circular: false # crops the image to make it circular
   #more_info: >
 
@@ -18,22 +18,20 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I currently contribute fulltime to [Bitcoin Core](https://github.com/bitcoin/bitcoin/).
-This include reviewing and proposing pull request that improve the software.
+I currently contribute full-time to [Bitcoin Core](https://github.com/bitcoin/bitcoin/). 
+I work from the [2140](https://2140.dev/) Bitcoin protocol development office in Amsterdam, Netherlands, sponsored by [Btrust](https://www.btrust.tech/) and 2140.
 
+I was raised in Nigeria and earned a Bachelor of Technology in Computer Science from [Modibbo Adama University](https://mau.edu.ng/about) in Yola, Nigeria.
 
-I grew up in Nigeria and studied computer science in my bachelor’ degree.
-These studies were fundamental to my current career as an open source contributor because 
-it provided the fundamental background necessary for me to be able to work as a software engineer.
+I started working professionally as a software developer during my third year of university.
+Most of my work has been on the server side, though I've occasionally worked on frontend projects too.
 
-I started working as a software developer from my colleague years, working at startups and even experimented building our's with colleagues.
-I have always been fascinated with how to use technology to solve problems for humans. Majority of my work has been on the backend of the system, 
-however sometimes I dabbled in the frontend as well.
+I discovered Bitcoin open-source development in 2023 through the [Btrust Builders](https://www.btrust.tech/builders) Fellowship (formerly Qala).
+Bitcoin offered a chance to work with C++, cryptography, and decentralized systems while tackling one of humanity's pressing problems: a broken financial system.
+This aligned with my goal of studying low-level systems, networks, mathematics, and algorithms.
+Hence, I left my job and started contributing to Bitcoin Core full-time in March 2023. Since then, I worked on fee rate estimation, the mempool component, and other critical parts of the software.
 
+In 2024, I interned at [Chaincode Labs](https://chaincode.com/), further deepening my understanding of the Bitcoin protocol.
 
-I was introduced to Bitcoin open-source development around 2023 via the [Btrust Builders](https://www.btrust.tech/builders) Fellowship when it was called Qala.
-I started contributing to bitcoin core around March of 2023 focusing on improving the fee rate estimation of the bitcoin core wallet, mempool component, and other critical aspects of the open source software.
-
-Alongside my technical work to [Bitcoin Core](https://github.com/bitcoin/bitcoin/), I enjoy mentoring passionate people to also contrubute effectively through 
-the same [Btrust Builders](https://www.btrust.tech/builders) program [Summer of Bitcoin](https://www.summerofbitcoin.org/) and previously hosts the [Bitcoin Core PR Review Club](https://bitcoincore.reviews/).
-
+Beyond my technical work on [Bitcoin Core](https://github.com/bitcoin/bitcoin/), I mentor new contributors through the [Btrust Builders](https://www.btrust.tech/builders) program and [Summer of Bitcoin](https://www.summerofbitcoin.org/).
+Occasionally, you can also find me hosting the [Bitcoin Core PR Review Club](https://bitcoincore.reviews/).
