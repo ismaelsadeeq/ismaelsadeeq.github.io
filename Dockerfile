@@ -9,9 +9,9 @@ FROM ruby:slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
-LABEL authors="Amir Pourmand,George Araújo" \
-      description="Docker image for al-folio academic template" \
-      maintainer="Amir Pourmand"
+LABEL authors="ismaelsadeeq" \
+      description="Docker image for ismaelsadeeq websit" \
+      maintainer="ismaelsadeeq"
 
 # uncomment these if you are having this issue with the build:
 # /usr/local/bundle/gems/jekyll-4.3.4/lib/jekyll/site.rb:509:in `initialize': Permission denied @ rb_sysopen - /srv/jekyll/.jekyll-cache/.gitignore (Errno::EACCES)
