@@ -23,7 +23,62 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
-        },{id: "books-the-beginning-of-infinity",
+        },{id: "post-determining-blocktemplate-fee-increase-using-fee-rate-diagram",
+        
+          title: "Determining BlockTemplate Fee Increase Using Fee Rate Diagram",
+        
+        description: "A method to track potential fee increases in block templates without full rebuilds using Cluster Mempool features",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/detecting-blocktemplate-fee-increase-using-feerate-diagram/";
+          
+        },
+      },{id: "post-analyzing-mining-pool-behavior-to-address-bitcoin-core-s-double-coinbase-reservation-issue",
+        
+          title: "Analyzing Mining Pool Behavior to Address Bitcoin Core’s Double Coinbase Reservation Issue",
+        
+        description: "Analysis of mining pool behavior regarding Bitcoin Core’s double coinbase reservation bug and its impact on block template weights.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/analyzing-mining-pool-behavior-to-address-bitcoin-core-double-coinbase-reservation-issue/";
+          
+        },
+      },{id: "post-bitcoind-policy-estimator-modes-analysis",
+        
+          title: "Bitcoind Policy Estimator Modes Analysis",
+        
+        description: "Analysis of Bitcoind estimatesmartfee modes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/bitcoind-policy-estimator-analysis/";
+          
+        },
+      },{id: "post-challenges-with-estimating-transaction-fee-rates",
+        
+          title: "Challenges with Estimating Transaction Fee Rates",
+        
+        description: "This post explores the reasons why estimating how much to pay for your transaction as fee is challenging, and the ways to overcome these challenges.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/challenges-with-estimating-tx-feerate/";
+          
+        },
+      },{id: "post-tips-and-techniques-for-constructing-private-transactions-with-privatetx-library",
+        
+          title: "Tips and Techniques for Constructing Private Transactions with Privatetx library",
+        
+        description: "How to construct Bitcoin Transactions that are mystery to chain analysis",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tips-and-techniques-for-constructing-private-txs/";
+          
+        },
+      },{id: "books-the-beginning-of-infinity",
           title: 'The Beginning of Infinity',
           description: "",
           section: "Books",handler: () => {
@@ -40,7 +95,7 @@ ninja.data = [{
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/github.com/ismaelsadeeq", "_blank");
+          window.open("https://github.com/ismaelsadeeq", "_blank");
         },
       },{
         id: 'social-rss',
