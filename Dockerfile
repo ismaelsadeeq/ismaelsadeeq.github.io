@@ -62,6 +62,9 @@ WORKDIR /srv/jekyll
 
 # install jekyll and dependencies
 RUN gem install --no-document jekyll bundler
+RUN bundle config set force_ruby_platform true
+RUN bundle lock --add-platform ruby
+
 RUN bundle install --no-cache
 
 EXPOSE 8080
