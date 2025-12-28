@@ -45,9 +45,9 @@ ninja.data = [{
             window.location.href = "/blog/2025/analyzing-mining-pool-behavior-to-address-bitcoin-core-double-coinbase-reservation-issue/";
           
         },
-      },{id: "post-bitcoind-policy-estimator-modes-analysis",
+      },{id: "post-bitcoind-block-policy-fee-rate-estimator-modes-analysis",
         
-          title: "Bitcoind Policy Estimator Modes Analysis",
+          title: "Bitcoind Block Policy Fee Rate Estimator Modes Analysis",
         
         description: "Analysis of Bitcoind estimatesmartfee modes",
         section: "Posts",
@@ -78,11 +78,86 @@ ninja.data = [{
             window.location.href = "/blog/2023/tips-and-techniques-for-constructing-private-txs/";
           
         },
-      },{id: "books-the-beginning-of-infinity",
+      },{id: "books-21-lessons-for-the-21st-century",
+          title: '21 Lessons for the 21st Century',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/21_lessons_of_the_21_century/";
+            },},{id: "books-abc-of-anarchism",
+          title: 'ABC of Anarchism',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/A_B_C_of_anarchism/";
+            },},{id: "books-atomic-habits",
+          title: 'Atomic Habits',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/atomic_habits/";
+            },},{id: "books-c-concurrency-in-action",
+          title: 'C++ Concurrency in Action',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/cpp_concurrency_in_action/";
+            },},{id: "books-c-primer",
+          title: 'C++ Primer',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/cpp_primer/";
+            },},{id: "books-deep-work",
+          title: 'Deep Work',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/deep_work/";
+            },},{id: "books-effective-modern-c",
+          title: 'Effective Modern C++',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/effective_mordern_cpp/";
+            },},{id: "books-governing-the-commons",
+          title: 'Governing the Commons',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/governing_the_commons/";
+            },},{id: "books-independence",
+          title: 'Independence',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/independence/";
+            },},{id: "books-the-laws-of-human-nature",
+          title: 'The Laws of Human Nature',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/laws_of_human_nature/";
+            },},{id: "books-magana-jari-ce",
+          title: 'Magana Jari Ce',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/magana_jari_ce/";
+            },},{id: "books-meditations",
+          title: 'Meditations',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/meditations/";
+            },},{id: "books-the-alchemist",
+          title: 'The Alchemist',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_alchemist/";
+            },},{id: "books-the-beginning-of-infinity",
           title: 'The Beginning of Infinity',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_beginning_of_infinity/";
+            },},{id: "books-there-was-a-country",
+          title: 'There Was a Country',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/there_was_a_country/";
+            },},{id: "books-things-fall-apart",
+          title: 'Things Fall Apart',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/things_fall_apart/";
             },},{
         id: 'social-email',
         title: 'email',
