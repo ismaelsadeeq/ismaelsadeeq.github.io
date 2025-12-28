@@ -93,6 +93,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/atomic_habits/";
+            },},{id: "books-bitcoin-dev-philosophy",
+          title: 'Bitcoin Dev Philosophy',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/bitcoin_dev_philosophy/";
             },},{id: "books-c-concurrency-in-action",
           title: 'C++ Concurrency in Action',
           description: "",
@@ -118,6 +123,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/governing_the_commons/";
+            },},{id: "books-a-graduate-course-in-applied-cryptography",
+          title: 'A Graduate Course in Applied Cryptography',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/graduate_course_on_cryptography/";
             },},{id: "books-independence",
           title: 'Independence',
           description: "",
@@ -133,6 +143,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/magana_jari_ce/";
+            },},{id: "books-mastering-bitcoin",
+          title: 'Mastering Bitcoin',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/mastering_bitcoin/";
             },},{id: "books-meditations",
           title: 'Meditations',
           description: "",
