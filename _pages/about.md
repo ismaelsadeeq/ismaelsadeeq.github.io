@@ -2,8 +2,7 @@
 layout: about
 title: about
 permalink: /
-#subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+subtitle: PGP Key <a href='#'>E9F7 6FD7 F0B6 6653 A7D8 9399 0E39 08F3 6498 9888</a>
 profile:
   align: right
   image: prof_pic.jpeg

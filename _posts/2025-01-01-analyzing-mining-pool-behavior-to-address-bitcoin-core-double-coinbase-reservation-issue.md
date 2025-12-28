@@ -8,8 +8,7 @@ tags:
   - mining
   - analysis
   - block-template
-categories:
-  - technical analysis
+categories: "technical analysis"
 ---
 
 In theory, Bitcoin Core's block-building algorithm reserves **4000 WU** for block header, transaction count and miners' coinbase transactions.  
