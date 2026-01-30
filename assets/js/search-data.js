@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
-        },{id: "post-determining-blocktemplate-fee-increase-using-fee-rate-diagram",
+        },{id: "post-managing-multiple-projects-with-git-worktrees",
+        
+          title: "Managing Multiple Projects with Git Worktrees",
+        
+        description: "A guide to using Git worktrees for managing multiple branches and tasks simultaneously.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/managing-multiple-projects-with-git-worktrees/";
+          
+        },
+      },{id: "post-determining-blocktemplate-fee-increase-using-fee-rate-diagram",
         
           title: "Determining BlockTemplate Fee Increase Using Fee Rate Diagram",
         
