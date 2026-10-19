@@ -14,4 +14,3 @@ released: 2018
 This book explores many of the defining issues of the 21st century, ranging from artificial intelligence and biotechnology to war, religion, and extremism.
 
 It is a very enlightening and thought-provoking read.
-

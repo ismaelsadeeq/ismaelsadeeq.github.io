@@ -14,4 +14,3 @@ released: 2016
 This book emphasizes discipline, focus, and the importance of doing meaningful work while ignoring distractions.
 
 Some of the work I am most proud of directly resulted from applying ideas in this book.
-

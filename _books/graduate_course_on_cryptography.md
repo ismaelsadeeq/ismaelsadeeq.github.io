@@ -10,4 +10,3 @@ status: Queued
 ---
 
 This book is an advanced exploration of cryptography for graduate-level students. It covers symmetric and asymmetric primitives, protocols, and real-world applications. It is rigorous and mathematical, making it an excellent reference for secure software development and research.
-

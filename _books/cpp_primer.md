@@ -12,4 +12,3 @@ status: Finished
 This was the first book I used to learn C++ while working on Bitcoin Core.
 It is a great but dense book for someone who wants to learn the fundamentals of the C++ programming language.
 Although outdated in the version of C++, I hope an updated edition is out soon.
-

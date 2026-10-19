@@ -14,4 +14,3 @@ released: 2018
 This is a dense and insightful book that highlights recurring patterns in human behavior.
 
 It helped me recognize biases such as confirmation bias and self-serving bias in my own thinking.
-

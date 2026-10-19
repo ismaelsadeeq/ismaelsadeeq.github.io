@@ -15,4 +15,3 @@ What a dense book, also given to me by a friend. This book challenges the status
 After I started this book around December 2025 at a Mauritius beach, another friend and I were exploring a game-theoretic topic, and he mentioned the Prisoner’s Dilemma as an argument. This also proved to me how widespread the use one-size-fits-all argument is.
 Elinor Ostrom challenges these ideas by performing deep research showing how, historically, people can coordinate. Coordination is crucial because, without it, these systems Elinor Ostrom explores fail. When communities coordinate, they can defeat the dilemma and make the rational choice of following rules for the benefit of all, even when there is temptation to free-ride.
 Using frameworks from observed communities, Ostrom presents principles that can be applied when faced with game-theoretic dilemmas and common resource governance. This is a hard read, but very enlightening and educational.
-

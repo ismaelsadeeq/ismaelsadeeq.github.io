@@ -15,5 +15,4 @@ The Beginning of Infinity offers a compelling argument that explanations are con
 
 The book’s most striking insight is how the pursuit of deeper explanations—rather than accepting surface observations, dogma, or authority—sparked the Enlightenment. You can visualize this shift at https://deep-timeline.oberbrunner.com/.
 
-Sections such as *Creation* and *The Path to Infinity* were particularly enjoyable and reinforced the idea that progress has no fundamental upper bound.
-
+Sections such as _Creation_ and _The Path to Infinity_ were particularly enjoyable and reinforced the idea that progress has no fundamental upper bound.

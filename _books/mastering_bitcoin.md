@@ -10,4 +10,3 @@ status: Finished
 ---
 
 Mastering Bitcoin is a comprehensive guide to understanding the Bitcoin protocol, its cryptography, and the mechanics of decentralized networks. It is both technical and approachable, providing insights for developers and enthusiasts who want to deeply understand Bitcoin’s inner workings.
-
