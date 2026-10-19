@@ -433,6 +433,9 @@ third_party_libraries:
     url:
       fonts: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/output/chtml/fonts/woff-v2/"
       js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+      # Same file on a second CDN, byte-identical so the integrity hash above
+      # covers it too. Used only if the primary fails to load.
+      fallback_js: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/{{version}}/es5/tex-mml-chtml.js"
     version: "3.2.2"
   masonry:
     integrity:

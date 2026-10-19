@@ -197,6 +197,11 @@
 
 {% if site.enable_math %}
   <!-- MathJax -->
+  <!--
+    The MathJax bundle is ~1.2MB and the CDN occasionally answers 503. When that
+    happens there is no retry, and every equation on the page stays as raw TeX,
+    so fall back to the same file on a second CDN.
+  -->
   <script
     defer
     type="text/javascript"
@@ -204,6 +209,7 @@
     src="{{ site.third_party_libraries.mathjax.url.js }}"
     integrity="{{ site.third_party_libraries.mathjax.integrity.js }}"
     crossorigin="anonymous"
+    onerror="this.onerror=null;var s=document.createElement('script');s.defer=true;s.src='{{ site.third_party_libraries.mathjax.url.fallback_js }}';s.integrity='{{ site.third_party_libraries.mathjax.integrity.js }}';s.crossOrigin='anonymous';document.head.appendChild(s);"
   ></script>
   {% unless page.pseudocode %}
     <script src="{{ '/assets/js/mathjax-setup.js' | relative_url | bust_file_cache }}"></script>

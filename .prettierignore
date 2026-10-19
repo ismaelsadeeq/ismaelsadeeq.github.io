@@ -7,6 +7,9 @@ assets/js/search/*.js
 assets/plotly/demo.html
 lighthouse_results/**
 _posts/2015-10-20-math.md
+# Liquid {% highlight %} block: prettier strips the indentation of the bash
+# script inside it, which changes what the post renders.
+_posts/2026-01-30-managing-multiple-projects-with-git-worktrees.md
 _sass/font-awesome/*.scss
 _sass/tabler-icons/*.scss
 _scripts/*
