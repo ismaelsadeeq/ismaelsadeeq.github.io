@@ -432,9 +432,12 @@ third_party_libraries:
       fonts: "output/chtml/fonts/woff-v2/"
     url:
       fonts: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/output/chtml/fonts/woff-v2/"
-      js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
-      # Same file on a second CDN, byte-identical so the integrity hash above
-      # covers it too. Used only if the primary fails to load.
+      # Served from this site, not a CDN: jsDelivr intermittently answered 503
+      # for this 1.2MB file, which left every equation on the page as raw TeX.
+      # The .min.js suffix matters -- jekyll-terser skips those, so the bytes
+      # stay identical to the published file and the integrity hash holds.
+      js: "/assets/js/mathjax/tex-mml-chtml.min.js"
+      # Second line of defence, byte-identical so the same hash covers it.
       fallback_js: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/{{version}}/es5/tex-mml-chtml.js"
     version: "3.2.2"
   masonry:
