@@ -23,7 +23,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
-        },{id: "post-managing-multiple-projects-with-git-worktrees",
+        },{id: "post-contributing-meaningfully-to-bitcoin-core",
+        
+          title: "Contributing Meaningfully to Bitcoin Core",
+        
+        description: "Notes from a hands-on session with Btrust Builders fellows on the Bitcoin Core development process, with a walkthrough of reviewing a small PR.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/contributing-meaningfully-to-bitcoin-core/";
+          
+        },
+      },{id: "post-bitcoin-core-pr-32317-review-separating-utxo-access-from-validation",
+        
+          title: "Bitcoin Core PR #32317 Review: Separating UTXO Access from Validation",
+        
+        description: "Review notes on the PR that moves coin access out of ConnectBlock, and why the two goals behind it are independent and should be pursued separately.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/separating-utxo-access-from-validation/";
+          
+        },
+      },{id: "post-managing-multiple-projects-with-git-worktrees",
         
           title: "Managing Multiple Projects with Git Worktrees",
         
@@ -174,6 +196,16 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_beginning_of_infinity/";
+            },},{id: "books-the-kite-runner",
+          title: 'The Kite Runner',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_kite_runner/";
+            },},{id: "books-the-narrow-road-to-the-deep-north",
+          title: 'The Narrow Road to the Deep North',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_narrow_road_to_the_deep_north/";
             },},{id: "books-there-was-a-country",
           title: 'There Was a Country',
           description: "",
