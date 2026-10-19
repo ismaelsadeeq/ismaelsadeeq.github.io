@@ -10,4 +10,3 @@ status: Finished
 ---
 
 Bitcoin Dev Philosophy examines the principles behind Bitcoin development and the ethos of decentralized software engineering. It explores the design decisions, trade-offs, and guiding philosophies that shape Bitcoin Core and its community.
-

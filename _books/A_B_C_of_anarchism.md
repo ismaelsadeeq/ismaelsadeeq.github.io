@@ -13,4 +13,3 @@ Before reading this book, my understanding of anarchism, like most people’s, w
 It explains anarchism, its foundations, the state, and why the author argues we do not need the state or the military. The arguments are compelling.
 The part I find speculative is the ending, where he discusses dismantling the state and people self-organizing to govern the commons. I think ideas from Elinor Ostrom would be very relevant here.
 However, human behavior is certainly dynamic and unpredictable, and the mindset shift required to achieve the ideas here is unprecedented. It is not impossible but very challenging, and the author also acknowledges this difficulty.
-

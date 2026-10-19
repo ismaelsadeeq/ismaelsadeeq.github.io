@@ -14,4 +14,3 @@ released: 2018
 This book is a practical guide to forming and sustaining good habits. I used it to build new routines and become more consistent in my studies.
 
 It is highly actionable and accessible.
-

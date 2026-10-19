@@ -13,11 +13,11 @@ I was invited to speak to the [Btrust Builders](https://btrust.tech) fellows abo
 
 Bitcoin Core is the reference implementation of the Bitcoin protocol. It connects you to the peer-to-peer network, downloads and validates blocks, lets you submit transactions to the network, and can be used for mining. It also ships with a wallet and a graphical user interface.
 
-It is an open source project with a diverse set of contributors and a flat governance structure.
+It is an open-source project with a diverse set of contributors and a flat governance structure.
 
 #### How to Contribute
 
-Mechanically, contributing to Bitcoin Core is like contributing to any other open source project: there are long-running projects, issues, and pull requests. Getting started, however, can be overwhelming. As a newcomer you don't really know what is what, or where work is actually needed.
+Mechanically, contributing to Bitcoin Core is like contributing to any other open-source project: there are long-running projects, issues, and pull requests. Getting started, however, can be overwhelming. As a newcomer you don't really know what is what, or where work is actually needed.
 
 Broadly, I think of contributors in two groups: **user contributors** and **passionate contributors**.
 
@@ -29,7 +29,7 @@ A user contributor is a technical person who uses the software regularly. They n
 
 A passionate contributor doesn't fall into the category above but wants to contribute anyway. We've seen an influx of passionate contributors recently, in large part due to incentives from grant-giving organisations.
 
-Unfortunately, a lot of the time this kind of contribution doesn't end up being meaningful, and in the worst case it becomes a drain on the project: low-signal PRs and reviews that cost maintainers and reviewers time without moving anything forward. Knowing how to be a passionate contributor *and* contribute meaningfully is not obvious, so the rest of this post focuses on a few hints for doing that.
+Unfortunately, a lot of the time this kind of contribution doesn't end up being meaningful, and in the worst case it becomes a drain on the project: low-signal PRs and reviews that cost maintainers and reviewers time without moving anything forward. Knowing how to be a passionate contributor _and_ contribute meaningfully is not obvious, so the rest of this post focuses on a few hints for doing that.
 
 #### Set Your Expectations
 
@@ -57,7 +57,7 @@ We started by reading the title and the PR description.
 
 #### On Using LLMs for Review
 
-LLMs are now part of most developers' workflow, so we approached this review with one. To be fair, you'll often learn more by reviewing *without* an LLM, because you're forced to figure everything out yourself. That said, LLM-assisted review can be very valuable and speed things up. It depends entirely on *how* you use it.
+LLMs are now part of most developers' workflows, so we approached this review with one. To be fair, you'll often learn more by reviewing _without_ an LLM, because you're forced to figure everything out yourself. That said, LLM-assisted review can be very valuable and speed things up. It depends entirely on _how_ you use it.
 
 My setup was simple: the LLM window open side by side with my code editor.
 
@@ -69,13 +69,13 @@ My setup was simple: the LLM window open side by side with my code editor.
 
 First, look at which files the PR changes and briefly read what each of them does. In this case everything was under `test/functional`:
 
-*   `test_framework/test_framework.py`
-*   `test_framework/test_node.py`
-*   `test_framework/util.py`
-*   `mining_mainnet.py`
-*   `rpc_validateaddress.py`
+- `test_framework/test_framework.py`
+- `test_framework/test_node.py`
+- `test_framework/util.py`
+- `mining_mainnet.py`
+- `rpc_validateaddress.py`
 
-We read through each and what they test.
+We read through each of them to understand what they test.
 
 #### Step 2: Note What You Don't Understand, and Research It
 
@@ -119,9 +119,9 @@ The author addressed the feedback and pushed an update. Sometimes a PR that has 
 
 This is a simple workflow for a simple PR. Other PRs warrant different approaches and much more scrutiny. For more thorough guides, see:
 
-*   [Gloria Zhao's review checklist](https://github.com/glozow/bitcoin-notes/blob/master/review-checklist.md)
-*   [Gloria Zhao's general review workshop notes](https://github.com/glozow/bitcoin-notes/blob/master/general-review-workshop.md)
-*   [Google's code review guidelines for reviewers](https://google.github.io/eng-practices/review/reviewer/standard.html)
+- [Gloria Zhao's review checklist](https://github.com/glozow/bitcoin-notes/blob/master/review-checklist.md)
+- [Gloria Zhao's general review workshop notes](https://github.com/glozow/bitcoin-notes/blob/master/general-review-workshop.md)
+- [Google's code review guidelines for reviewers](https://google.github.io/eng-practices/review/reviewer/standard.html)
 
 Thanks to the Btrust team for having me, and to the fellows for an engaging session.
 
@@ -129,7 +129,7 @@ Happy Hacking :)
 
 #### References
 
-*   [Bitcoin Core repository](https://github.com/bitcoin/bitcoin)
-*   [CONTRIBUTING.md](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md)
-*   [Developer Notes](https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md)
-*   [PR #36320](https://github.com/bitcoin/bitcoin/pull/36320)
+- [Bitcoin Core repository](https://github.com/bitcoin/bitcoin)
+- [CONTRIBUTING.md](https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md)
+- [Developer Notes](https://github.com/bitcoin/bitcoin/blob/master/doc/developer-notes.md)
+- [PR #36320](https://github.com/bitcoin/bitcoin/pull/36320)

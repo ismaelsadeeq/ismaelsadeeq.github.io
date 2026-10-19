@@ -13,8 +13,8 @@ Currently, when miners want to determine whether a block template with more fees
 
 The experimental mining interface introduced in [Bitcoin Core v30](https://delvingbitcoin.org/t/bitcoin-core-v30-0-released/2050), `waitnext()`, improves this by allowing clients to wait and receive a new block template after a noticeable fee increase or when the blockchain tip changes.
 
-However, internally, `waitnext()` also regenerates block templates every second.
-Building a block template locks Bitcoin Core mutexes, (mempool (`cs`) and `cs_main`) throughout the build. These locks prevent concurrent access during template generation for thread safety purpose, which can delay transaction processing and relay to peers.
+Internally, however, `waitnext()` still regenerates block templates every second.
+Building a block template holds two Bitcoin Core mutexes, the mempool's (`cs`) and `cs_main`, for the duration of the build. These locks prevent concurrent access during template generation for thread safety, which can delay transaction processing and relay to peers.
 
 A better approach is to **track the potential fee increase** resulting from each mempool update that affects the current block template. The node can then decide whether rebuilding the template is worthwhile based on the accumulated fee increase.
 
@@ -22,20 +22,20 @@ Implementing this in current Bitcoin Core is challenging because, for each mempo
 
 However, with the introduction of the **Cluster Mempool** [1], this limitation no longer applies.
 
-This post explores a simple method that leverages Cluster Mempool feature to determine whether there has been a potential **fee rate improvement** in a block template without requiring a full rebuild.
+This post explores a simple method that leverages the Cluster Mempool to determine whether there has been a potential **fee rate improvement** in a block template without requiring a full rebuild.
 
 #### Prerequisites
 
-* [Cluster Mempool Definitions](https://delvingbitcoin.org/t/cluster-mempool-definitions-theory/202)
-* [Mempool Incentive Compatibility](https://delvingbitcoin.org/t/mempool-incentive-compatibility/553)
-* [Cluster Mempool RBF Thoughts](https://delvingbitcoin.org/t/cluster-mempool-rbf-thoughts/156)
+- [Cluster Mempool Definitions](https://delvingbitcoin.org/t/cluster-mempool-definitions-theory/202)
+- [Mempool Incentive Compatibility](https://delvingbitcoin.org/t/mempool-incentive-compatibility/553)
+- [Cluster Mempool RBF Thoughts](https://delvingbitcoin.org/t/cluster-mempool-rbf-thoughts/156)
 
 #### Definitions
 
-* **Fee Rate:** The fee of a transaction divided by its size.
-* **Chunk:** A grouped list of related transactions that should be mined together.
-* **Chunk Fee Rate:** The total fees of all transactions in a chunk divided by their total size.
-* **Fee Rate Diagram:** A monotonically decreasing list of chunks used to plot a graph where the y-axis represents the fee and the x-axis represents transaction size.
+- **Fee Rate:** The fee of a transaction divided by its size.
+- **Chunk:** A grouped list of related transactions that should be mined together.
+- **Chunk Fee Rate:** The total fees of all transactions in a chunk divided by their total size.
+- **Fee Rate Diagram:** A monotonically decreasing list of chunks used to plot a graph where the y-axis represents the fee and the x-axis represents transaction size.
 
 ### Block Template Fee Increase
 
@@ -81,9 +81,9 @@ When a new transaction enters the mempool, two primary cases occur:
   </div>
 </div>
 
-In both cases, the addition is accepted *iff* the **new fee rate diagram** is strictly better.
+In both cases, the addition is accepted _iff_ the **new fee rate diagram** is strictly better.
 
-There is also a rare case where update has **only the old diagram**,  for example, when the mempool is full and the lowest-fee chunk is evicted. This is uncommon, as miners typically run nodes with large mempools, but it should still be handled.
+There is also a rare case where an update produces **only an old diagram**, for example, when the mempool is full and the lowest-fee chunk is evicted. This is uncommon, as miners typically run nodes with large mempools, but it should still be handled.
 
 #### After an Update
 
@@ -122,7 +122,7 @@ For each chunk $$c$$ in the **new fee rate diagram**, if $$r_c > r_L$$, add $$c$
 
 Loop through the block template chunks. For each chunk $$c$$:
 
-* If any chunk in $$R$$ matches $$c$$, remove it from the block template.
+- If any chunk in $$R$$ matches $$c$$, remove it from the block template.
   Subtract its fees from $$F_{\text{modified}}$$ and its size from $$S_{\text{modified}}$$.
 
 Clear $$R$$ afterward.
@@ -156,20 +156,20 @@ $$
 \Delta F = F_{\text{naive}} - F
 $$
 
-* **If** $$\Delta F \ge F_{\text{threshold}}$$: rebuild the block template.
-* **If** all chunks in $$A$$ are added and $$\Delta F < F_{\text{threshold}}$$: stop (insufficient improvement).
+- **If** $$\Delta F \ge F_{\text{threshold}}$$: rebuild the block template.
+- **If** all chunks in $$A$$ are added and $$\Delta F < F_{\text{threshold}}$$: stop (insufficient improvement).
 
 **Phase 3: Iterative merge (if naive merge is inconclusive)**
 
 If the naive merge shows potential but is inconclusive, perform an **iterative merge** of the block template chunks and chunks in $$A$$:
 
-* Initialize an empty block template and fill it by selecting the best chunks from both the existing template and $$A$$.
+- Initialize an empty block template and fill it by selecting the best chunks from both the existing template and $$A$$.
 
-* Stop when:
+- Stop when:
 
-  * Block weight $$W$$ is reached,
-  * No chunk from the template or $$A$$ will fit, or
-  * The iteration limit is reached.
+  - Block weight $$W$$ is reached,
+  - No chunk from the template or $$A$$ will fit, or
+  - The iteration limit is reached.
 
 Compute:
 
@@ -177,16 +177,16 @@ $$
 \Delta F_{\text{new}} = F_{\text{new}} - F
 $$
 
-* **If** $$\Delta F_{\text{new}} \ge F_{\text{threshold}}$$: build and return the new block template.
+- **If** $$\Delta F_{\text{new}} \ge F_{\text{threshold}}$$: build and return the new block template.
 
 **Phase 4: Update state**
 
 After building a new block template:
 
-* Clear $$A$$
-* Set the new template as the current one
-* Update $$L$$ to the worst chunk in the new template
-* Update $$F_{\text{modified}} = F_{\text{new}}$$, $$S_{\text{modified}} = S_{\text{new}}$$
+- Clear $$A$$
+- Set the new template as the current one
+- Update $$L$$ to the worst chunk in the new template
+- Update $$F_{\text{modified}} = F_{\text{new}}$$, $$S_{\text{modified}} = S_{\text{new}}$$
 
 ### Implementation Note
 
@@ -208,5 +208,3 @@ This approach does not account for bin-packing effects at the block template tai
 [2] [Package-Aware Fee Estimator Post Cluster Mempool](https://delvingbitcoin.org/t/package-aware-fee-estimator-post-cluster-mempool/312)
 
 [3] [Bin Packing Problem](https://en.wikipedia.org/wiki/Bin_packing_problem)
-
-

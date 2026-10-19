@@ -14,4 +14,3 @@ released: 1958
 I first read this book during my Senior Secondary School Year 3 at the recommendation of my father. I learned a great deal about Igbo culture, the pre-colonial South East region, and how colonization influenced the Igbo people.
 
 It is a succinct and powerful work of literature. It is no surprise that Achebe is regarded as the father of modern African literature.
-

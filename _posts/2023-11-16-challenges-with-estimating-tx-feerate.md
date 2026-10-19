@@ -32,7 +32,7 @@ Fee estimation is probabilistic and utilizes various data sources, including **h
 
 ### Challenges of Fee Estimation with Historical Blocks and Mempool Transactions Data
 
-- This approach, based on transactions in the node's mempool that have been confirmed, reduces the risk of miners manipulating future predictions by publishing high–fee-rate transactions. The threat of other miners picking up these high–fee-rate transactions discourages manipulation. However, this method does not consider the current mempool size and is *package-unaware*, which reduces data points and, in some cases, leads to inaccurate assumptions.
+- This approach, based on transactions in the node's mempool that have been confirmed, reduces the risk of miners manipulating future predictions by publishing high–fee-rate transactions. The threat of other miners picking up these high–fee-rate transactions discourages manipulation. However, this method does not consider the current mempool size and is _package-unaware_, which reduces data points and, in some cases, leads to inaccurate assumptions.
 
 ### How Historical Blocks and Mempool Transactions Data Fee Estimation Falls Short
 
@@ -63,14 +63,13 @@ I have been watching the blockchain for a while to verify the behavior of the `C
 
 #### Fee Rate Estimates from **812593** to **812596**
 
-| Block Height                          | EstimateSmartFee (2 blocks) | Mempool-Based Fee Estimate (High priority) | Average Fee Rate | Median Fee Rate |
-|--------------------------------------|-----------------------------|--------------------------------------------|------------------|-----------------|
-| Immediately after 812593 confirmed   | 18 s/vb                     | 22 s/vb                                     | N/A              | N/A             |
-| 45 minutes after 812593              | 18 s/vb                     | 33 s/vb                                     | N/A              | N/A             |
-| Block 812594 was confirmed           | 18 s/vb                     | 33 s/vb                                     | 44 s/vb          | 33 s/vb         |
-| Block 812595 was confirmed           | 18 s/vb                     | 22 s/vb                                     | 25 s/vb          | 22 s/vb         |
-| Block 812596 was confirmed           | 20 s/vb                     | 22 s/vb                                     | 23 s/vb          | 19 s/vb         |
-
+| Block Height                       | EstimateSmartFee (2 blocks) | Mempool-Based Fee Estimate (High priority) | Average Fee Rate | Median Fee Rate |
+| ---------------------------------- | --------------------------- | ------------------------------------------ | ---------------- | --------------- |
+| Immediately after 812593 confirmed | 18 s/vb                     | 22 s/vb                                    | N/A              | N/A             |
+| 45 minutes after 812593            | 18 s/vb                     | 33 s/vb                                    | N/A              | N/A             |
+| Block 812594 was confirmed         | 18 s/vb                     | 33 s/vb                                    | 44 s/vb          | 33 s/vb         |
+| Block 812595 was confirmed         | 18 s/vb                     | 22 s/vb                                    | 25 s/vb          | 22 s/vb         |
+| Block 812596 was confirmed         | 20 s/vb                     | 22 s/vb                                    | 23 s/vb          | 19 s/vb         |
 
 <div class="row mt-4">
   <div class="col-md-9">
@@ -84,7 +83,6 @@ I have been watching the blockchain for a while to verify the behavior of the `C
     </figure>
   </div>
 </div>
-
 
 The estimates above demonstrate how the `CBlockPolicyEstimator` operates during congestion, completely independent of the mempool's condition.
 
@@ -176,7 +174,6 @@ These are heuristics, and the proposal is still in its early stages. More insigh
 
 Because of the constraints discussed above, no fee estimate can ever be completely accurate in predicting future events. If your transaction takes significantly longer to confirm than expected, don’t worry.
 
-In most cases, you have two tools available: *replace-by-fee* and *CPFP*—the fee-bumping tag team. While the details of replace-by-fee and CPFP, along with scenarios where they may not rescue a stuck transaction, are beyond the scope of this article, they make for an interesting [read](https://gist.github.com/glozow/3de85d7e4fc58c5723f8fcbf21e5e795).
+In most cases, you have two tools available: _replace-by-fee_ and _CPFP_—the fee-bumping tag team. While the details of replace-by-fee and CPFP, along with scenarios where they may not rescue a stuck transaction, are beyond the scope of this article, they make for an interesting [read](https://gist.github.com/glozow/3de85d7e4fc58c5723f8fcbf21e5e795).
 
 If a transaction overpaid, however—tough luck. There is no “undo” button. A valid transaction will remain valid and will eventually be picked up by a miner. Consider it your generous contribution to a miner’s retirement fund.
-

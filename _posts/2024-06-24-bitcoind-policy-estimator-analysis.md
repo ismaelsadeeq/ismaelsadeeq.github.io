@@ -28,10 +28,10 @@ This analysis examines the fee estimation data from Block `846887` to `847322`, 
 
 A total of **13,718** estimates were made from `2024-06-07 12:18:25` to `2024-06-10 07:48:05`, spanning Block `846886` to Block `847321`, with confirmation targets of 1 and 2 blocks.
 
-| Estimator                 | Overpaid Estimates | Underpaid Estimates | Estimates Within Range |
-|---------------------------|--------------------|---------------------|------------------------|
-| Bitcoind Conservative     | 3760 (96.14%)      | 66 (1.69%)          | 85 (2.17%)             |
-| Bitcoind Economic         | 3033 (77.55%)      | 433 (11.07%)        | 445 (11.38%)           |
+| Estimator             | Overpaid Estimates | Underpaid Estimates | Estimates Within Range |
+| --------------------- | ------------------ | ------------------- | ---------------------- |
+| Bitcoind Conservative | 3760 (96.14%)      | 66 (1.69%)          | 85 (2.17%)             |
+| Bitcoind Economic     | 3033 (77.55%)      | 433 (11.07%)        | 445 (11.38%)           |
 
 ### Log-Scale Graphs
 
@@ -156,4 +156,3 @@ systematic overpayment.
 
 - [Mempool-based fee estimation on Bitcoin Core](https://delvingbitcoin.org/t/mempool-based-fee-estimation-on-bitcoin-core/703/8)
 - [Bitcoin Core PR #30157](https://github.com/bitcoin/bitcoin/pull/30157)
-

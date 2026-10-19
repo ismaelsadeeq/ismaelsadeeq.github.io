@@ -11,4 +11,3 @@ status: Queued
 
 This was the next book we planned to read after Scott Meyers’ work to improve our skills in writing multi-threaded code.
 However, we did not get far. I started a couple of chapters and should get back to it soon.
-

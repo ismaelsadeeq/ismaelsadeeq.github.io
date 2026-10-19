@@ -10,6 +10,11 @@ on:
       - master
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  # never cancel a run on the default branch, only superseded branch runs
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/master' }}
+
 jobs:
   check:
     # available images: https://github.com/actions/runner-images#available-images

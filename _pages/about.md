@@ -17,7 +17,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I currently contribute full-time to [Bitcoin Core](https://github.com/bitcoin/bitcoin/). 
+I currently contribute full-time to [Bitcoin Core](https://github.com/bitcoin/bitcoin/).
 I work from the [2140](https://2140.dev/) Bitcoin protocol development office in Amsterdam, Netherlands, sponsored by [Btrust](https://www.btrust.tech/) and 2140.
 
 I was raised in Nigeria and earned a Bachelor of Technology in Computer Science from [Modibbo Adama University](https://mau.edu.ng/about) in Yola, Nigeria.

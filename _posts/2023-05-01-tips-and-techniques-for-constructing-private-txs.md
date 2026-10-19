@@ -10,34 +10,32 @@ categories: technical
 ### Introduction
 
 The Bitcoin blockchain offers users the ability to conduct pseudonymous transactions, but privacy can easily be compromised with common missteps such as reusing addresses, improper coin selection and transaction construction.
-Worse is taking full custody of users keys and subsequently attaching names or identity documents (KYC) to corresponding keys. As a result, chain analysis tools can easily identify individual users, trace the flow of bitcoins, 
+Worse is taking full custody of users keys and subsequently attaching names or identity documents (KYC) to corresponding keys. As a result, chain analysis tools can easily identify individual users, trace the flow of bitcoins,
 and de-annonymize transactions. This has significant implications for the privacy and security of Bitcoin users. In this article, we will explore some steps that Bitcoin service builders can take to improve the privacy of their
-users and minimize the impact of chain analysis tools. By implementing these steps, service providers can offer their users a more secure and private experience on the Bitcoin network, while helping to preserve the core values of Bitcoin 
+users and minimize the impact of chain analysis tools. By implementing these steps, service providers can offer their users a more secure and private experience on the Bitcoin network, while helping to preserve the core values of Bitcoin
 as a decentralized and privacy-focused system.
 
 ### Keys Custody and identity documents (KYC)
 
 Service providers should avoid taking full custody of their users private keys and should not associate users’ names or identity documents (KYC) with their Bitcoin addresses. Features such as output descriptors can give
 users full control over their private keys while reducing service providers’ risks and responsibilities. By importing only the extended public key descriptor, users can recover their Bitcoin balance and transaction history
-without providing identifying information and provide their private key only when signing a transaction. Although some jurisdictions may require collecting user information, service providers should avoid doing so as much 
+without providing identifying information and provide their private key only when signing a transaction. Although some jurisdictions may require collecting user information, service providers should avoid doing so as much
 as possible to protect their users’ privacy and the Bitcoin system as a whole.
 
-
-If the above missteps are addressed, then it all comes down to how you construct your transaction. To enhance privacy, avoid reusing addresses when constructing transactions, and perform a coinjoin when aggregating inputs for 
+If the above missteps are addressed, then it all comes down to how you construct your transaction. To enhance privacy, avoid reusing addresses when constructing transactions, and perform a coinjoin when aggregating inputs for
 a payment (combining multiple Bitcoin transactions into a single transaction) to break common input heuristics.
 
 ### [Privatetx-lib](http://github.com/ismaelsadeeq/privateTx)
 
-Privatetx-lib is a library that checks partially signed bitcoin transactions (PSBTs) and provides alerts on whether the given PSBT is vulnerable to common chain analysis heuristics. 
-These heuristics are what chain analysis services use to extract information from transactions, as mentioned in [research by OXT](https://medium.com/oxt-research/understanding-bitcoin-privacy-with-oxt-part-2-4-20010e0dab97) 
+Privatetx-lib is a library that checks partially signed bitcoin transactions (PSBTs) and provides alerts on whether the given PSBT is vulnerable to common chain analysis heuristics.
+These heuristics are what chain analysis services use to extract information from transactions, as mentioned in [research by OXT](https://medium.com/oxt-research/understanding-bitcoin-privacy-with-oxt-part-2-4-20010e0dab97)
 and the [Bitcoin privacy wiki](https://en.bitcoin.it/wiki/Privacy).
 
-PSBT's are used as an input for privatetx-lib because finalized PSBTs contain information about transaction inputs, which enables the algorithm to check for these heuristics. This is unlike a serialized transaction that only 
+PSBT's are used as an input for privatetx-lib because finalized PSBTs contain information about transaction inputs, which enables the algorithm to check for these heuristics. This is unlike a serialized transaction that only
 provides the input’s transaction ID and output index. Additionally, PSBTs are the current standard used by Bitcoin applications. To learn more about PSBTs and how to use them in your application, refer to
 [BIP 174](https://github.com/bitcoin/bips/blob/master/bip-0174.mediawiki). These Heuristics are:
 
 #### Transaction Wide Address reuse
-
 
 <div class="row mt-3">
   <div class="col-sm-8">
@@ -82,7 +80,6 @@ If it’s an aggregation transaction, this heuristic will detect that the inputs
 
 This transaction in the diagram above clearly indicates that the two inputs of 15 and 25 bitcoins were consolidated in order to perform the 35 bitcoin payment. The change output is likely to be the 4.8 bitcoin output.
 
-
 <br>
 
 <div class="row mt-3">
@@ -95,8 +92,6 @@ This transaction in the diagram above clearly indicates that the two inputs of 1
 
 A common way to break the address reuse heuristic is to combine it with another transaction, commonly known as coinjoin, which helps to obscure the connection between the inputs and outputs of a transaction and make it
 difficult to determine whether they belong to the same user.
-
-
 
 <br>
 
@@ -130,7 +125,6 @@ Example of output with a different script type with the input.
 
 The 1 bitcoin output above is a P2SH, which clearly shows that it is the payment output, and the 0.99999 bitcoin output is the change output.
 
-
 <br>
 
 <div class="row mt-3">
@@ -142,7 +136,6 @@ The 1 bitcoin output above is a P2SH, which clearly shows that it is the payment
 <br>
 
 To break these heuristics, change the change output address to P2SH.
-
 
 <br>
 
@@ -160,7 +153,6 @@ An observer of this transaction can not distinguish whether it is the payment or
 
 It is common that exchanges make settlements in a peeling transaction format below.
 
-
 <br>
 
 <div class="row mt-3">
@@ -173,7 +165,6 @@ It is common that exchanges make settlements in a peeling transaction format bel
 
 The 19.44444 bitcoin is clearly the change output, whereas 0.5 bitcoin is a payment.
 
-
 <br>
 
 <div class="row mt-3">
@@ -184,7 +175,7 @@ The 19.44444 bitcoin is clearly the change output, whereas 0.5 bitcoin is a paym
 
 <br>
 
-To break the peeling transaction heuristic, it is recommended for exchange builders to avoid peeling the transaction and improve the privacy of their transactions. 
+To break the peeling transaction heuristic, it is recommended for exchange builders to avoid peeling the transaction and improve the privacy of their transactions.
 Peeling transactions often occur due to the reuse of addresses and the accumulation of large amounts of bitcoin in a single address, resulting in a large value input that needs to be peeled off to settle a customer.
 Instead, it is suggested to avoid reusing addresses and have a low value output that can be used to settle a customer. By doing this, exchange builders can ensure the privacy of their transactions and avoid the detection of the peeling heuristic.
 
@@ -196,7 +187,6 @@ transaction and ensure they are resilient to chain analysis tools.
 Chain analysis tools use heuristics to analyze the Bitcoin blockchain transaction by transaction. These heuristics cluster wallets, predict their unspent balance, and track their payment history. The tools determine the
 change and payment outputs in a transaction and link the spending transaction of the change output to previous transactions. By checking for the reuse of the input or change output address, the tools create a graph of clusters of wallets
 and their payments over time, along with the remaining balance currently held.
-
 
 <br>
 
@@ -213,7 +203,6 @@ _Image By Gaurav Agrawal Coinpath August 15, 2020_
 However, this data alone is not enough to identify the real-world identities behind these wallets. That’s where collaboration with exchanges and wallets that require personal identifiable information comes into play.
 With this collaboration, chain analysis tools can link real identities with payments or wallets, potentially compromising the privacy of users.
 
-
 <br>
 
 <div class="row mt-3">
@@ -229,6 +218,6 @@ This demonstrates how a compromise of privacy not only affects the victim, but a
 
 ### Conclusion
 
-Protecting user privacy is essential in preserving the core values of Bitcoin as a decentralized and privacy-focused system. 
+Protecting user privacy is essential in preserving the core values of Bitcoin as a decentralized and privacy-focused system.
 Bitcoin service builders should take several steps to minimize the impact of chain analysis tools on their users by using of tools like privatetx-lib, which can help service providers improve how they construct their transactions.
 By implementing these steps, Bitcoin service providers can offer their users a more secure and private experience on the Bitcoin network, while protecting their privacy and maintaining their reputation as a privacy-focused service.
