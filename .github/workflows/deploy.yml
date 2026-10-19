@@ -106,7 +106,9 @@ jobs:
       - name: Deploy 🚀
         # Only ever publish from the default branch: a push to any other
         # branch builds as a check and stops short of deploying.
-        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        # workflow_dispatch is included so a manual run from the Actions tab
+        # actually deploys instead of building and stopping.
+        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
