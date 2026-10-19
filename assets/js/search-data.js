@@ -146,6 +146,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/deep_work/";
+            },},{id: "books-dune",
+          title: 'Dune',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/dune/";
             },},{id: "books-effective-modern-c",
           title: 'Effective Modern C++',
           description: "",
