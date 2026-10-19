@@ -5,7 +5,7 @@ author: Elinor Ostrom
 cover: assets/img/book_covers/gov_commons.png
 categories: Economics Political-Science Game-Theory
 stars: 4
-status: Reading
+status: Finished
 #started: 2025-12-01
 #finished: 2025-12-15
 released: 1990

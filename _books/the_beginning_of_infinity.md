@@ -5,7 +5,7 @@ author: David Deutsch
 cover: assets/img/book_covers/begininning_of_infinity.png
 categories: Physics Popular-Science Philosophy-of-Science
 stars: 5
-status: Reading
+status: Finished
 #started: 2023-01-10
 #finished: 2023-02-22
 released: 2011
