@@ -3,7 +3,8 @@ name: Deploy site
 on:
   push:
     branches:
-      - "**"
+      - master
+      - main
     paths:
       - "assets/**"
       - "_sass/**"
