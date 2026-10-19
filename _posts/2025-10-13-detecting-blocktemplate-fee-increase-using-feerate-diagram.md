@@ -13,8 +13,8 @@ Currently, when miners want to determine whether a block template with more fees
 
 The experimental mining interface introduced in [Bitcoin Core v30](https://delvingbitcoin.org/t/bitcoin-core-v30-0-released/2050), `waitnext()`, improves this by allowing clients to wait and receive a new block template after a noticeable fee increase or when the blockchain tip changes.
 
-However, internally, `waitnext()` also regenerates block templates every second.
-Building a block template locks Bitcoin Core mutexes, (mempool (`cs`) and `cs_main`) throughout the build. These locks prevent concurrent access during template generation for thread safety purpose, which can delay transaction processing and relay to peers.
+Internally, however, `waitnext()` still regenerates block templates every second.
+Building a block template holds two Bitcoin Core mutexes, the mempool's (`cs`) and `cs_main`, for the duration of the build. These locks prevent concurrent access during template generation for thread safety, which can delay transaction processing and relay to peers.
 
 A better approach is to **track the potential fee increase** resulting from each mempool update that affects the current block template. The node can then decide whether rebuilding the template is worthwhile based on the accumulated fee increase.
 
@@ -22,7 +22,7 @@ Implementing this in current Bitcoin Core is challenging because, for each mempo
 
 However, with the introduction of the **Cluster Mempool** [1], this limitation no longer applies.
 
-This post explores a simple method that leverages Cluster Mempool feature to determine whether there has been a potential **fee rate improvement** in a block template without requiring a full rebuild.
+This post explores a simple method that leverages the Cluster Mempool to determine whether there has been a potential **fee rate improvement** in a block template without requiring a full rebuild.
 
 #### Prerequisites
 
@@ -83,7 +83,7 @@ When a new transaction enters the mempool, two primary cases occur:
 
 In both cases, the addition is accepted *iff* the **new fee rate diagram** is strictly better.
 
-There is also a rare case where update has **only the old diagram**,  for example, when the mempool is full and the lowest-fee chunk is evicted. This is uncommon, as miners typically run nodes with large mempools, but it should still be handled.
+There is also a rare case where an update produces **only an old diagram**, for example, when the mempool is full and the lowest-fee chunk is evicted. This is uncommon, as miners typically run nodes with large mempools, but it should still be handled.
 
 #### After an Update
 

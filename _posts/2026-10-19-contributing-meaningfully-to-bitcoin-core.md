@@ -13,11 +13,11 @@ I was invited to speak to the [Btrust Builders](https://btrust.tech) fellows abo
 
 Bitcoin Core is the reference implementation of the Bitcoin protocol. It connects you to the peer-to-peer network, downloads and validates blocks, lets you submit transactions to the network, and can be used for mining. It also ships with a wallet and a graphical user interface.
 
-It is an open source project with a diverse set of contributors and a flat governance structure.
+It is an open-source project with a diverse set of contributors and a flat governance structure.
 
 #### How to Contribute
 
-Mechanically, contributing to Bitcoin Core is like contributing to any other open source project: there are long-running projects, issues, and pull requests. Getting started, however, can be overwhelming. As a newcomer you don't really know what is what, or where work is actually needed.
+Mechanically, contributing to Bitcoin Core is like contributing to any other open-source project: there are long-running projects, issues, and pull requests. Getting started, however, can be overwhelming. As a newcomer you don't really know what is what, or where work is actually needed.
 
 Broadly, I think of contributors in two groups: **user contributors** and **passionate contributors**.
 
@@ -57,7 +57,7 @@ We started by reading the title and the PR description.
 
 #### On Using LLMs for Review
 
-LLMs are now part of most developers' workflow, so we approached this review with one. To be fair, you'll often learn more by reviewing *without* an LLM, because you're forced to figure everything out yourself. That said, LLM-assisted review can be very valuable and speed things up. It depends entirely on *how* you use it.
+LLMs are now part of most developers' workflows, so we approached this review with one. To be fair, you'll often learn more by reviewing *without* an LLM, because you're forced to figure everything out yourself. That said, LLM-assisted review can be very valuable and speed things up. It depends entirely on *how* you use it.
 
 My setup was simple: the LLM window open side by side with my code editor.
 
@@ -75,7 +75,7 @@ First, look at which files the PR changes and briefly read what each of them doe
 *   `mining_mainnet.py`
 *   `rpc_validateaddress.py`
 
-We read through each and what they test.
+We read through each of them to understand what they test.
 
 #### Step 2: Note What You Don't Understand, and Research It
 
