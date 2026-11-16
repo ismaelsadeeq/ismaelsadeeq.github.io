@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/books/";
           },
-        },{id: "post-contributing-meaningfully-to-bitcoin-core",
+        },{id: "post-what-went-wrong-when-i-ran-a-local-coding-agent-on-bitcoin-core",
+        
+          title: "What Went Wrong When I Ran a Local Coding Agent on Bitcoin Core...",
+        
+        description: "Benchmarking a fully local coding agent (OpenCode + qwen3:8b on Ollama) on general and Bitcoin Core tasks",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/what-went-wrong-local-coding-agent-bitcoin-core/";
+          
+        },
+      },{id: "post-contributing-meaningfully-to-bitcoin-core",
         
           title: "Contributing Meaningfully to Bitcoin Core",
         
